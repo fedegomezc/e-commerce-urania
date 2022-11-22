@@ -1,6 +1,12 @@
+import Navbar from './components/Navbar/Navbar';
+import ItemListContainer from './components/ItemListContainer';
+
 const App = () => {
   return(
-    <h1>Hola Mundo</h1>
+    <>
+      <Navbar />
+      <ItemListContainer mensaje="Bienvenido/a!" />
+    </>
   )
 }
 
