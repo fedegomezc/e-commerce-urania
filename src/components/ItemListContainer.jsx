@@ -4,7 +4,7 @@ import ItemList from "./ItemList";
 import { data } from "../utils/data";
 import { customFetch } from "../utils/customFecth";
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
     const [datos, setDatos] = useState([]);
 
     // DB simulation 
@@ -12,11 +12,10 @@ const ItemListContainer = (props) => {
         customFetch(2000, data)
             .then (response => setDatos(response))
             .catch (err => console.log(err))
-    }, [])
+    }, []);
 
     return (
         <>
-            <WelcomeContainer>{props.mensaje}</WelcomeContainer>
             <ItemList datos = {datos} />
         </>
     )
