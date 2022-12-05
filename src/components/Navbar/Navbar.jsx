@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 import CartWidget from './CartWidget';
 
 const Navbar = () => {
