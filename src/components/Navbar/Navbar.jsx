@@ -6,9 +6,9 @@ const Navbar = () => {
         <NavContainer>
             <h2><span>Urania </span><small>cerámica</small></h2>
             <div>
-                <a href="#">Categoria 1</a>
-                <a href="#">Categoria 2</a>
-                <a href="#">Categoria 3</a>
+                <a href="#">Chops</a>
+                <a href="#">Ceniceros</a>
+                <a href="#">Porta-Sahumerios</a>
             </div>
             <CartWidget />
             
