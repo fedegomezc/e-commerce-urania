@@ -1,14 +1,15 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import CartWidget from './CartWidget';
 
 const Navbar = () => {
     return (
         <NavContainer>
-            <h2><span>Urania </span><small>cerámica</small></h2>
+            <h2><span><LogoLink to='/'>Urania </LogoLink></span><small>cerámica</small></h2>
             <div>
-                <a href="#">Chops</a>
-                <a href="#">Ceniceros</a>
-                <a href="#">Porta-Sahumerios</a>
+                <CategoryLink to='/category/1'>Chops</CategoryLink>
+                <CategoryLink to='/category/2'>Ceniceros</CategoryLink>
+                <CategoryLink to='/category/3'>Porta-Sahumerios</CategoryLink>
             </div>
             <CartWidget />
             
@@ -17,6 +18,29 @@ const Navbar = () => {
 }
 
 export default Navbar;
+
+const LogoLink = styled(Link)`
+    text-decoration: none;
+`
+
+const CategoryLink = styled(Link)`
+    color: #35295d;
+    padding: 1rem 2rem 1.15rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    min-width: 80px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 50px;
+
+    :hover {
+    background-color: #9578ae;
+    background-size: 100% 100%;
+    color: #cfcaeb;
+
+    text-shadow: 0 -1px 0 #550ee7;
+    font-weight: bold;
+    }    
+`
 
 const NavContainer = styled.nav`
     padding: .4rem;
@@ -34,24 +58,5 @@ const NavContainer = styled.nav`
             font-family: 'Cookie', cursive;
             font-size: 40px;
         }
-    }
-    
-    a{
-        color: #35295d;
-        padding: 1rem 2rem 1.15rem;
-        text-transform: uppercase;
-        cursor: pointer;
-        min-width: 80px;
-        font-family: 'Roboto', sans-serif;
-        border-radius: 50px;
-    }
-    a:hover {
-
-        background-color: #9578ae;
-        background-size: 100% 100%;
-        color: #cfcaeb;
-        
-        text-shadow: 0 -1px 0 #550ee7;
-        font-weight: bold;
     }
 `

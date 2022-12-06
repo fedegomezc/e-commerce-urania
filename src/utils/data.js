@@ -5,7 +5,7 @@ export const data = [
         stock: 1,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
-        category: 1,
+        idCategory: 3,
         image: 'https://i.ibb.co/sK7qGf0/Porta-Sahumerio1.jpg'
     },
     {
@@ -14,7 +14,7 @@ export const data = [
         stock: 1,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
-        category: 1,
+        idCategory: 1,
         image: 'https://i.ibb.co/NFFsLGB/Chopp-cancer.jpg'
     },
     {
@@ -23,7 +23,7 @@ export const data = [
         stock: 1,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
-        category: 1,
+        idCategory: 2,
         image: 'https://i.ibb.co/KjL9bCp/Cenicero-Hongos.jpg'
     },
     {
@@ -32,7 +32,7 @@ export const data = [
         stock: 1,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
-        category: 1,
+        idCategory: 1,
         image: 'https://i.ibb.co/vdQ9WLF/Chopp-piscis.jpg'
     },
     {
@@ -41,7 +41,7 @@ export const data = [
         stock: 1,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
-        category: 1,
+        idCategory: 1,
         image: 'https://i.ibb.co/wSs9kTt/Chopp-Libra.jpg'
     },
     {
@@ -50,7 +50,7 @@ export const data = [
         stock: 1,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
-        category: 1,
+        idCategory: 1,
         image: 'https://i.ibb.co/bPqMt8X/Chopp-Leo.jpg'
     },
     {
@@ -59,7 +59,7 @@ export const data = [
         stock: 1,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
-        category: 1,
+        idCategory: 1,
         image: 'https://i.ibb.co/N3pk04z/Chopp-Escorpio.jpg'
     },
     {
@@ -68,7 +68,7 @@ export const data = [
         stock: 1,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
-        category: 1,
+        idCategory: 1,
         image: 'https://i.ibb.co/FD4xNFv/Chopp-Capricornio.jpg'
     },
     {
@@ -77,7 +77,7 @@ export const data = [
         stock: 1,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
-        category: 1,
+        idCategory: 1,
         image: 'https://i.ibb.co/XpL4V8f/Chopp-Aries.jpg'
     },
     {
@@ -86,7 +86,7 @@ export const data = [
         stock: 1,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
-        category: 1,
+        idCategory: 2,
         image: 'https://i.ibb.co/kBmKG9c/Cenicero-Flor.jpg'
     }
 ] 

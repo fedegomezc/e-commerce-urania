@@ -3,16 +3,19 @@ import styled from "styled-components";
 import ItemList from "./ItemList";
 import { data } from "../utils/data";
 import { customFetch } from "../utils/customFecth";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
     const [datos, setDatos] = useState([]);
-
-    // DB simulation 
+    const { idCategory } = useParams();
+ 
     useEffect (() => {
-        customFetch(2000, data)
-            .then (response => setDatos(response))
-            .catch (err => console.log(err))
-    }, []);
+        let task = idCategory ? data.filter(item => item.idCategory === parseInt(idCategory)) : data
+        
+        customFetch( 2000, task)
+        .then (response => setDatos(response))
+        .catch (err => console.log(err))            
+    }, [idCategory]);
 
     return (
         <>
