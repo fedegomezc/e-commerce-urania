@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Item = (props) => {
     return (
@@ -7,9 +8,8 @@ const Item = (props) => {
             <h3>${props.cost}</h3>
             <h4>{props.text}</h4>
             <button>Agregar al carrito</button>
-            <a href="#">Detalles</a>
+            <Link to={`/item/${props.id}`}>+Info</Link>
         </CardContainer>
-        
     )
 }
 
