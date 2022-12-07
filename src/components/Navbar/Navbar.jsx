@@ -25,6 +25,7 @@ const LogoLink = styled(Link)`
 `
 
 const CategoryLink = styled(Link)`
+    text-decoration: none;
     color: #9d43d9;
     padding: 1rem 2rem 1.15rem;
     text-transform: uppercase;
