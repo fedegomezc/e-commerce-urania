@@ -4,7 +4,7 @@ export const data = [
         text: 'Porta-Sahumerio Gatito',
         stock: 1,
         cost: 2500,
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 3,
         image: 'https://i.ibb.co/sK7qGf0/Porta-Sahumerio1.jpg'
     },
@@ -13,7 +13,7 @@ export const data = [
         text: 'Chop/vaso (Signo: Cancer)',
         stock: 1,
         cost: 2500,
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 1,
         image: 'https://i.ibb.co/NFFsLGB/Chopp-cancer.jpg'
     },
@@ -22,7 +22,7 @@ export const data = [
         text: 'Cenicero Hongos',
         stock: 1,
         cost: 2500,
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 2,
         image: 'https://i.ibb.co/KjL9bCp/Cenicero-Hongos.jpg'
     },
@@ -31,7 +31,7 @@ export const data = [
         text: 'Chop/vaso (Signo: Piscis)',
         stock: 1,
         cost: 2500,
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 1,
         image: 'https://i.ibb.co/vdQ9WLF/Chopp-piscis.jpg'
     },
@@ -40,7 +40,7 @@ export const data = [
         text: 'Chop/vaso (Signo: Libra)',
         stock: 1,
         cost: 2500,
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 1,
         image: 'https://i.ibb.co/wSs9kTt/Chopp-Libra.jpg'
     },
@@ -49,7 +49,7 @@ export const data = [
         text: 'Chop/vaso (Signo: Leo)',
         stock: 1,
         cost: 2500,
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 1,
         image: 'https://i.ibb.co/bPqMt8X/Chopp-Leo.jpg'
     },
@@ -58,7 +58,7 @@ export const data = [
         text: 'Chop/vaso (Signo: Escorpio)',
         stock: 1,
         cost: 2500,
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 1,
         image: 'https://i.ibb.co/N3pk04z/Chopp-Escorpio.jpg'
     },
@@ -67,7 +67,7 @@ export const data = [
         text: 'Chop/vaso (Signo: Capricornio)',
         stock: 1,
         cost: 2500,
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 1,
         image: 'https://i.ibb.co/FD4xNFv/Chopp-Capricornio.jpg'
     },
@@ -76,7 +76,7 @@ export const data = [
         text: 'Chop/vaso (Signo: Aries)',
         stock: 1,
         cost: 2500,
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 1,
         image: 'https://i.ibb.co/XpL4V8f/Chopp-Aries.jpg'
     },
@@ -85,7 +85,7 @@ export const data = [
         text: 'Cenicero Flor',
         stock: 1,
         cost: 2500,
-        description: "Lorem ipsum dolor sit amet consectetur adipiscing elit interdum auctor eget",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 2,
         image: 'https://i.ibb.co/kBmKG9c/Cenicero-Flor.jpg'
     }

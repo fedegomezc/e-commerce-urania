@@ -21,10 +21,11 @@ export default Navbar;
 
 const LogoLink = styled(Link)`
     text-decoration: none;
+    color: #9d43d9;
 `
 
 const CategoryLink = styled(Link)`
-    color: #35295d;
+    color: #9d43d9;
     padding: 1rem 2rem 1.15rem;
     text-transform: uppercase;
     cursor: pointer;
@@ -50,7 +51,7 @@ const NavContainer = styled.nav`
     justify-content: space-between;
 
     h2{
-        color: #550ee7;
+        color: #9d43d9;
         font-weight: 400;
         margin-left: 1rem;
         span{

@@ -1,20 +1,21 @@
 import styled from "styled-components";
-import {FaShoppingCart} from 'react-icons/fa'
+import { BuyButton } from "./Item";
 
 const ItemDetail = ({item}) => {
     return (
         <Wrapper>
-            <Outer>
-                <Content>
-                    <h1>Afro<br/> baseball hair</h1>
-                    <p>{item.description}</p>
-                    
-                    <Button>
-                        <a href="#">${item.cost}</a><a href="#"><FaShoppingCart />ADD TO CART</a>
-                    </Button>
-                </Content>
+            <LeftColumn>
                 <img src={item.image} />
-            </Outer>
+            </LeftColumn>
+			<RightColumn>
+				<h2>{item.text}</h2>
+				<br />
+				<h3>${item.cost}</h3>
+				<br />
+				<p>{item.description}</p>
+				<br />
+				<BuyButton>Añadir al carrito</BuyButton>
+            </RightColumn>
         </Wrapper>   
     )
 }
@@ -22,95 +23,27 @@ const ItemDetail = ({item}) => {
 export default ItemDetail;
 
 const Wrapper = styled.div`
-    display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: Montserrat;
-	background: #262626;
-	width: 100%;
-	height: 100vh;
-
-    img {
-	position: absolute;
-	top: 0px;
-	right: -20px;
-	z-index: 0;
-	animation-delay: 0.5s;
-    width: 300px;
-    }
-`
-
-const Outer = styled.div`
-    position: relative;
-	background: #fff;
-	height: 350px;
-	width: 550px;
-	overflow: hidden;
+	font-family: 'Roboto', sans-serif;
+	max-width: 1200px;
+	margin: 0 auto;
 	display: flex;
-	align-items: center;
+	flex-wrap: wrap;
+	text-align: center;
+	padding: 25px;
 `
-const Content = styled.div`
-    animation-delay: 0.3s;
-	position: absolute;
-	left: 20px;
-	z-index: 3
+const LeftColumn = styled.div`
+	padding: 10px;
+  	flex: 50%;
+	background-color: #e8dce4d6;
 
-    p {
-	width: 280px;
-	font-size: 13px;
-	line-height: 1.4;
-	color: #aaa;
-	margin: 20px 0;
-    }
+	img {
+	width: 350px;
+	border-radius: 5%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
 `
-const Button = styled.div`
-    width: fit-content;
-	height: fit-content;
-	margin-top: 10px;
-
-    a {
-	display: inline-block;
-	overflow: hidden;
-	position: relative;
-	font-size: 11px;
-	color: #111;
-	text-decoration: none;
-	padding: 10px 15px;
-	border: 1px solid #aaa;
-	font-weight: bold;
-    }
-
-    a:after{
-	content: "";
-	position: absolute;
-	top: 0;
-	right: -10px;
-	width: 0%;
-	background: #111;
-	height: 100%;
-	z-index: -1;
-	transition: width 0.3s ease-in-out;
-	transform: skew(-25deg);
-	transform-origin: right;
-    }
-
-    a:hover:after {
-	width: 150%;
-	left: -10px;
-	transform-origin: left;
-    }
-
-    a:hover {
-	color: #fff;
-	transition: all 0.5s ease;
-    }
-
-    a:nth-of-type(1) {
-	border-radius: 50px 0 0 50px;
-	border-right: none;
-    }
-
-    a:nth-of-type(2) {
-	border-radius: 0px 50px 50px 0;
-    }
+const RightColumn = styled.div`
+	padding: 10px;
+  	flex: 50%;
+	background-color: #e8dce4d6;
 `

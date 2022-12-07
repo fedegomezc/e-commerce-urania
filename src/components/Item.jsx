@@ -7,13 +7,23 @@ const Item = (props) => {
             <img src={props.image} alt={props.description} />
             <h3>${props.cost}</h3>
             <h4>{props.text}</h4>
-            <button>Agregar al carrito</button>
-            <Link to={`/item/${props.id}`}>+Info</Link>
+            <BuyButton>Agregar al carrito</BuyButton>
+            <InfoLink to={`/item/${props.id}`}>+Info</InfoLink>
         </CardContainer>
     )
 }
 
 export default Item;
+
+const InfoLink = styled(Link)`
+    text-decoration: none;
+    color: #9d43d9;
+    position: relative;
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding-top: 15px;
+`
 
 const CardContainer = styled.div`
     width: 250px;
@@ -22,7 +32,7 @@ const CardContainer = styled.div`
     padding: 0.7em;
     border-radius: 7px;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    background-color: #af96be;
+    background-color: #eecbe3;
     font-family: 'Roboto', sans-serif;
 
     img {
@@ -31,44 +41,48 @@ const CardContainer = styled.div`
 
     h3 {
     margin: 0.5em 0em;
-    color: #d3c5d8;
+    color: #9d43d9;
     font-weight: bold;
+    padding-left: 10px;
     }
     h4 {
     font-size: 0.875em;
     margin: 0.5em 0em;
-    color: #d3c5d8;
+    color: #9d43d9;
     font-weight: normal;
+    padding-bottom: 10px;
+    padding-left: 10px;
     }
     :hover {
     transform: translateY(-7px);
-    box-shadow: 1.25px 1.25px 10px rgba(191, 167, 147, 1);
+    box-shadow: 1.25px 1.25px 10px #3f659e;
     }
 
-    button {
+`
+export const BuyButton = styled.button`
     position: relative;
-    display: inline-block;
-    margin: 15px;
-    padding: 15px 30px;
+    display: block;
+    margin: auto;
+    padding: 15px 25px;
     text-align: center;
     font-size: 12px;
+    font-family: 'Roboto', sans-serif;
     letter-spacing: 1px;
     text-decoration: none;
-    color: rgb(135, 44, 209);
+    color: #9d43d9;
     background: transparent;
     cursor: pointer;
     transition: ease-out 0.5s;
-    border: 2px solid rgb(135, 44, 209);
+    border: 2px solid #9d43d9;
     border-radius: 10px;
-    box-shadow: inset 0 0 0 0 rgb(176, 44, 209);
+    box-shadow: inset 0 0 0 0 #9d43d9;
+
+    :hover {
+    color: #eecbe3;
+    box-shadow: inset 0 -100px 0 0 #bc61f9;
     }
 
-    button:hover {
-    color: #3f213c;
-    box-shadow: inset 0 -100px 0 0 rgb(196, 134, 246);
-    }
-
-    button:active {
+    :active {
     transform: scale(0.9);
     }
 `
