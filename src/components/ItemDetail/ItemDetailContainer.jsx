@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { customFetch } from "../utils/customFecth";
-import { data } from "../utils/data";
+import { customFetch } from "../../utils/customFecth";
+import { data } from "../../utils/data";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 

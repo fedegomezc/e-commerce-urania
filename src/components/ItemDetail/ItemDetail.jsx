@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BuyButton } from "./Item";
+import { BuyButton } from '../ItemList/Item'
 
 const ItemDetail = ({item}) => {
     return (
