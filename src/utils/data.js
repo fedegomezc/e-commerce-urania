@@ -2,7 +2,7 @@ export const data = [
     {
         id: 1,
         text: 'Porta-Sahumerio Gatito',
-        stock: 1,
+        stock: 3,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 3,
@@ -11,7 +11,7 @@ export const data = [
     {
         id: 2,
         text: 'Chop/vaso (Signo: Cancer)',
-        stock: 1,
+        stock: 5,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 1,
@@ -20,7 +20,7 @@ export const data = [
     {
         id: 3,
         text: 'Cenicero Hongos',
-        stock: 1,
+        stock: 2,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 2,
@@ -29,7 +29,7 @@ export const data = [
     {
         id: 4,
         text: 'Chop/vaso (Signo: Piscis)',
-        stock: 1,
+        stock: 5,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 1,
@@ -38,7 +38,7 @@ export const data = [
     {
         id: 5,
         text: 'Chop/vaso (Signo: Libra)',
-        stock: 1,
+        stock: 5,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 1,
@@ -47,7 +47,7 @@ export const data = [
     {
         id: 6,
         text: 'Chop/vaso (Signo: Leo)',
-        stock: 1,
+        stock: 4,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 1,
@@ -56,7 +56,7 @@ export const data = [
     {
         id: 7,
         text: 'Chop/vaso (Signo: Escorpio)',
-        stock: 1,
+        stock: 3,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 1,
@@ -65,7 +65,7 @@ export const data = [
     {
         id: 8,
         text: 'Chop/vaso (Signo: Capricornio)',
-        stock: 1,
+        stock: 4,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 1,
@@ -74,7 +74,7 @@ export const data = [
     {
         id: 9,
         text: 'Chop/vaso (Signo: Aries)',
-        stock: 1,
+        stock: 4,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 1,
@@ -83,7 +83,7 @@ export const data = [
     {
         id: 10,
         text: 'Cenicero Flor',
-        stock: 1,
+        stock: 3,
         cost: 2500,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida luctus enim vitae bibendum. Nulla ac consequat metus, in finibus ex. Vivamus dapibus laoreet est, ac eleifend diam euismod non. Etiam in semper ex, et tincidunt mauris. Phasellus vitae laoreet diam. Duis ac nisl quis ante varius rutrum. Nunc sit amet aliquam nulla",
         idCategory: 2,

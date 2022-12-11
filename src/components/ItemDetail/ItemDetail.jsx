@@ -1,22 +1,32 @@
 import styled from "styled-components";
 import { BuyButton } from '../ItemList/Item'
+import ItemCount from "./ItemCount";
 
 const ItemDetail = ({item}) => {
     return (
-        <Wrapper>
-            <LeftColumn>
-                <img src={item.image} />
-            </LeftColumn>
-			<RightColumn>
-				<h2>{item.text}</h2>
-				<br />
-				<h3>${item.cost}</h3>
-				<br />
-				<p>{item.description}</p>
-				<br />
-				<BuyButton>Añadir al carrito</BuyButton>
-            </RightColumn>
-        </Wrapper>   
+		<>
+		{
+			item && item.image
+            ? 
+			<Wrapper>
+				<LeftColumn>
+					<img src={item.image} />
+				</LeftColumn>
+				<RightColumn>
+					<h2>{item.text}</h2>
+					<br />
+					<h3>${item.cost}</h3>
+					<br />
+					<p>{item.description}</p>
+					<br />
+					<p><strong>{item.stock}</strong> unidad/es en stock</p>
+					<BuyButton>Añadir al carrito</BuyButton>
+					<ItemCount stock={item.stock}/>
+				</RightColumn>
+			</Wrapper>
+			: <p>Cargando...</p>
+		}   
+		</>
     )
 }
 
