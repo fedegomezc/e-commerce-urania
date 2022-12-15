@@ -20,8 +20,8 @@ const ItemDetail = ({item}) => {
 					<p>{item.description}</p>
 					<br />
 					<p><strong>{item.stock}</strong> unidad/es en stock</p>
-					<BuyButton>Añadir al carrito</BuyButton>
 					<ItemCount stock={item.stock}/>
+					<BuyButton>Añadir al carrito</BuyButton>
 				</RightColumn>
 			</Wrapper>
 			: <p>Cargando...</p>
