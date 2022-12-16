@@ -1,8 +1,17 @@
 import styled from "styled-components";
-import { BuyButton } from '../ItemList/Item'
+import { useState } from "react";
 import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
+import { BuyButton } from "../ItemList/Item";
 
 const ItemDetail = ({item}) => {
+	const [itemCount, setItemCount] = useState(0);
+
+	const onAdd = (quantityToAdd) => {
+		alert("Seleccionaste "+ quantityToAdd + " items.");
+		setItemCount(quantityToAdd);
+	}
+
     return (
 		<>
 		{
@@ -20,8 +29,12 @@ const ItemDetail = ({item}) => {
 					<p>{item.description}</p>
 					<br />
 					<p><strong>{item.stock}</strong> unidad/es en stock</p>
-					<ItemCount stock={item.stock}/>
-					<BuyButton>Añadir al carrito</BuyButton>
+					{
+						itemCount === 0 ?
+						<ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd}/> :
+						<Link to='/cart' style={{textDecoration: "none"}}><BuyButton>Checkout</BuyButton></Link>
+					}
+					
 				</RightColumn>
 			</Wrapper>
 			: <p>Cargando...</p>

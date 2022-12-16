@@ -1,15 +1,19 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { BuyButton } from '../ItemList/Item'
 
 const ItemCount = ({stock = 0, initial = 1, onAdd}) => {
     const [count, setCount] = useState(initial)
 
     return (
-        <CountContainer>
-        <ButtonCount onClick={() => setCount(count - 1)} disabled={count === initial || stock === 0}>-</ButtonCount>
-        <p>{count}</p>
-        <ButtonCount onClick={() => setCount(count + 1)} disabled={count === stock || stock === 0}>+</ButtonCount>
-        </CountContainer>
+        <>
+            <CountContainer>
+            <ButtonCount onClick={() => setCount(count - 1)} disabled={count === initial || stock === 0}>-</ButtonCount>
+            <p>{count}</p>
+            <ButtonCount onClick={() => setCount(count + 1)} disabled={count === stock || stock === 0}>+</ButtonCount>
+            </CountContainer>
+            <BuyButton onClick={() => onAdd(count)}>Añadir al carrito</BuyButton>
+        </>
     )
 
 }
