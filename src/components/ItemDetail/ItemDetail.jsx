@@ -37,7 +37,7 @@ const ItemDetail = ({item}) => {
 					
 				</RightColumn>
 			</Wrapper>
-			: <p>Cargando...</p>
+			: <LoaderContainer><Loader></Loader></LoaderContainer>
 		}   
 		</>
     )
@@ -69,4 +69,36 @@ const RightColumn = styled.div`
 	padding: 10px;
   	flex: 50%;
 	background-color: #e8dce4d6;
+`
+
+const LoaderContainer = styled.div`
+	display: grid;
+	place-items: center;
+`
+
+const Loader = styled.span`
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100px;
+	height: 100px;
+
+	:before , :after {
+	content: '';
+	border-radius: 50%;
+	position: absolute;
+	inset: 0;
+	box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3) inset;
+	}
+	
+	:after {
+	box-shadow: 0 2px 0 #9d43d9 inset;
+	animation: rotate 2s linear infinite;
+	}
+
+	@keyframes rotate {
+	0% {  transform: rotate(0)}
+	100% { transform: rotate(360deg)}
+	}
 `
