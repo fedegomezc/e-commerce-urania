@@ -45,6 +45,9 @@ const ItemDetail = ({item}) => {
 
 export default ItemDetail;
 
+
+// Styled Components //
+
 const Wrapper = styled.div`
 	font-family: 'Roboto', sans-serif;
 	max-width: 1200px;
@@ -71,12 +74,12 @@ const RightColumn = styled.div`
 	background-color: #e8dce4d6;
 `
 
-const LoaderContainer = styled.div`
+export const LoaderContainer = styled.div`
 	display: grid;
 	place-items: center;
 `
 
-const Loader = styled.span`
+export const Loader = styled.span`
 	position: absolute;
 	top: 50%;
 	left: 50%;

@@ -1,17 +1,23 @@
 import styled from 'styled-components';
 import Item from './Item';
+import { LoaderContainer, Loader} from '../ItemDetail/ItemDetail';
 
 const ItemList = (props) => {
     return (
         <CardsContainer>
         {
-            props.datos.map(item => <Item key={item.id} {...item}/> )
+            props.datos.length > 0 ?
+            props.datos.map(item => <Item key={item.id} {...item}/> ) :
+            <LoaderContainer><Loader></Loader></LoaderContainer>
         }
         </CardsContainer>
     )
 }
 
 export default ItemList;
+
+
+// Styled Components //
 
 const CardsContainer = styled.section`
     display: flex;
