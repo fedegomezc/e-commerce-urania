@@ -3,13 +3,18 @@ import { useState } from "react";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 import { BuyButton } from "../ItemList/Item";
+import { useContext } from "react";
+import { CartContext } from "../Cart/CartContext";
 
 const ItemDetail = ({item}) => {
 	const [itemCount, setItemCount] = useState(0);
+	const { addToCart } = useContext(CartContext)
 
 	const onAdd = (quantityToAdd) => {
 		alert("Seleccionaste "+ quantityToAdd + " items.");
 		setItemCount(quantityToAdd);
+		// Global function from cartContext
+		addToCart(item, quantityToAdd);
 	}
 
     return (
