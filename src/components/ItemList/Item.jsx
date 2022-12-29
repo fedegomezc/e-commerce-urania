@@ -15,6 +15,8 @@ const Item = (props) => {
 
 export default Item;
 
+// Styled components
+
 const InfoLink = styled(Link)`
     text-decoration: none;
     color: #9d43d9;

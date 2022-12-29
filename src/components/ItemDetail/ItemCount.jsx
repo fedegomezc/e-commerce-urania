@@ -20,6 +20,8 @@ const ItemCount = ({stock = 0, initial = 1, onAdd}) => {
 
 export default ItemCount;
 
+// Styled components
+
 const CountContainer = styled.div`
     padding: 10px;
     display: flex;
