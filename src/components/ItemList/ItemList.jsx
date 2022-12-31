@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import Item from './Item';
 import { LoaderContainer, Loader} from '../ItemDetail/ItemDetail';
 
-const ItemList = (props) => {
+const ItemList = ({datos}) => {
     return (
         <CardsContainer>
         {
-            props.datos.length > 0 ?
-            props.datos.map(item => <Item key={item.id} {...item}/> ) :
+            datos.length > 0 ?
+            datos.map(item => <Item key={item.id} id={item.id} title={item.text} price={item.cost} image={item.image} description={item.description} />) :
             <LoaderContainer><Loader></Loader></LoaderContainer>
         }
         </CardsContainer>

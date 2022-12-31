@@ -1,12 +1,16 @@
 import {FaShoppingCart} from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { CartContext } from '../Cart/CartContext';
+import { useContext } from 'react';
 
 const CartWidget = () => {
+const {quantityProd } = useContext(CartContext);
+
     return(
         <CartIcon>
             <Link to={"/cart"}><FaShoppingCart /></Link>
-            <CartAmount>0</CartAmount>
+            <CartAmount>{quantityProd}</CartAmount>
         </CartIcon>
         
     )

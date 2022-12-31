@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const Item = (props) => {
+const Item = ({ id, title, price, image, description }) => {
     return (
         <CardContainer>
-            <img src={props.image} alt={props.description} />
-            <h3>${props.cost}</h3>
-            <h4>{props.text}</h4>
+            <img src={image} alt={description} />
+            <h3>${price}</h3>
+            <h4>{title}</h4>
             <BuyButton>Agregar al carrito</BuyButton>
-            <InfoLink to={`/item/${props.id}`}>+Info</InfoLink>
+            <InfoLink to={`/item/${id}`}>+Info</InfoLink>
         </CardContainer>
     )
 }
