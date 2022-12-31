@@ -8,6 +8,7 @@ import { db } from '../../utils/firebaseConfig';
 
 
 
+
 const Cart = () => {
   const { cartList, deleteItem, removeList, total} = useContext(CartContext);
 
@@ -36,8 +37,6 @@ const Cart = () => {
       items: itemsForDB,
       date: serverTimestamp()
     };
-
-    console.log(order);
 
     const createOrderInFirestore = async () => {
       const newOrderRef = doc(collection(db, "orders"))
@@ -80,8 +79,8 @@ const Cart = () => {
                         <div>
                           <h3>{item.text}</h3>
                           <p>Cantidad: {item.quantityToAdd}</p>
-                          <p>Precio: {item.price}</p>
-                          <p>Subtotal: {item.quantityToAdd * item.price}</p>
+                          <p>Precio: $ {item.price}</p>
+                          <p>Subtotal: $ {item.quantityToAdd * item.price}</p>
                           <button onClick={() => deleteItem(item.id)}>Eliminar</button>
                         </div> 
                       </Product>
@@ -90,7 +89,7 @@ const Cart = () => {
                 }
               </Products>
               <Total>
-                <p>Total: {total}</p>
+                <p>Total: $ {total}</p>
                 <CheckoutButton onClick={createOrder}>Finalizar compra</CheckoutButton>
               </Total>
               
@@ -106,42 +105,42 @@ export default Cart
 // Styled components
 
 const CartContainer = styled.section`
-
-`
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  `
 
 const Top = styled.div`
   
-
 `
 const TopButton = styled.button`
-  
+  padding: 10px;
 
 `
 const Products = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   margin: 0 auto;
   max-width: 800px;
   padding: 20px;
+  font-family: 'Roboto', sans-serif;
 `
 const Product = styled.div`
-  background-color: #fff;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  padding: 20px;
-  text-align: center;
-  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
   h3 {
     margin: 0 0 10px;
+    font-size: 20px;
   }
 
   img {
     display: flex;
     margin: 0 auto;
-    max-width: 100%;
+    width: 12rem;
+    height: auto;
   }
 
   p {
@@ -162,8 +161,43 @@ const Product = styled.div`
 `
 const Total = styled.div`
   /* estilos para la sección final */
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  position: relative;
+  display: block;
+  margin: auto;
+  text-align: center;
+  p {
+    padding: 15px;
+    font-weight: bold;
+  }
 `;
 
 const CheckoutButton = styled.button`
-  /* estilos para el botón de finalizar compra */
+  position: relative;
+  display: block;
+  margin: auto;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #9d43d9;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #9d43d9;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #9d43d9;
+
+  :hover {
+  color: #eecbe3;
+  box-shadow: inset 0 -100px 0 0 #bc61f9;
+  }
+
+  :active {
+  transform: scale(0.9);
+  }
+  
 `;

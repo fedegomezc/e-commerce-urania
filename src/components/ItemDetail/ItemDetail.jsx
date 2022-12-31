@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { useState } from "react";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
-import { BuyButton } from "../ItemList/Item";
 import { useContext } from "react";
 import { CartContext } from "../Cart/CartContext";
 
@@ -109,4 +108,31 @@ export const Loader = styled.span`
 	0% {  transform: rotate(0)}
 	100% { transform: rotate(360deg)}
 	}
+`
+export const BuyButton = styled.button`
+    position: relative;
+    display: block;
+    margin: auto;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #9d43d9;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #9d43d9;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #9d43d9;
+
+    :hover {
+    color: #eecbe3;
+    box-shadow: inset 0 -100px 0 0 #bc61f9;
+    }
+
+    :active {
+    transform: scale(0.9);
+    }
 `

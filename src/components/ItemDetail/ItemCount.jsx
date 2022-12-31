@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { BuyButton } from '../ItemList/Item'
+import { BuyButton } from './ItemDetail'
 
 const ItemCount = ({stock = 0, initial = 1, onAdd}) => {
     const [count, setCount] = useState(initial)

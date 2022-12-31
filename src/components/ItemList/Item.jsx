@@ -7,7 +7,6 @@ const Item = ({ id, title, price, image, description }) => {
             <img src={image} alt={description} />
             <h3>${price}</h3>
             <h4>{title}</h4>
-            <BuyButton>Agregar al carrito</BuyButton>
             <InfoLink to={`/item/${id}`}>+Info</InfoLink>
         </CardContainer>
     )
@@ -18,13 +17,31 @@ export default Item;
 // Styled components
 
 const InfoLink = styled(Link)`
-    text-decoration: none;
-    color: #9d43d9;
     position: relative;
-    text-align: center;
     display: block;
     margin: auto;
-    padding-top: 15px;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #9d43d9;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #9d43d9;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #9d43d9;
+
+    :hover {
+    color: #eecbe3;
+    box-shadow: inset 0 -100px 0 0 #bc61f9;
+    }
+
+    :active {
+    transform: scale(0.9);
+    }
 `
 
 const CardContainer = styled.div`
@@ -60,31 +77,4 @@ const CardContainer = styled.div`
     box-shadow: 1.25px 1.25px 10px #3f659e;
     }
 
-`
-export const BuyButton = styled.button`
-    position: relative;
-    display: block;
-    margin: auto;
-    padding: 15px 25px;
-    text-align: center;
-    font-size: 12px;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: #9d43d9;
-    background: transparent;
-    cursor: pointer;
-    transition: ease-out 0.5s;
-    border: 2px solid #9d43d9;
-    border-radius: 10px;
-    box-shadow: inset 0 0 0 0 #9d43d9;
-
-    :hover {
-    color: #eecbe3;
-    box-shadow: inset 0 -100px 0 0 #bc61f9;
-    }
-
-    :active {
-    transform: scale(0.9);
-    }
 `
