@@ -5,8 +5,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { setDoc, collection, doc, serverTimestamp, updateDoc, increment } from "firebase/firestore";
 import { db } from '../../utils/firebaseConfig';
-
-
+import Swal from 'sweetalert2';
 
 
 const Cart = () => {
@@ -46,7 +45,12 @@ const Cart = () => {
 
     createOrderInFirestore()
       .then(result =>{
-        alert('Orden creada!\nOrder ID: ' + result.id)
+        Swal.fire({
+          title: 'Orden Creada!',
+          text: 'Order ID: ' + result.id,
+          confirmButtonText: 'Cerrar',
+          confirmButtonColor: '#9d43d9',
+      })
         removeList();
       })
       .catch(err => console.log(err));

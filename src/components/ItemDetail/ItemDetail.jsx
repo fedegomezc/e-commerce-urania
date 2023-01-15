@@ -4,13 +4,24 @@ import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../Cart/CartContext";
+import Swal from 'sweetalert2';
 
 const ItemDetail = ({item}) => {
 	const [itemCount, setItemCount] = useState(0);
 	const { addToCart } = useContext(CartContext)
 
 	const onAdd = (quantityToAdd) => {
-		alert("Seleccionaste "+ quantityToAdd + " items.");
+		Swal.fire({
+			position: 'top-end',
+			icon: 'success',
+			title: 'Producto agregado al carrito',
+			showConfirmButton: false,
+			timer: 1500,
+			toast: true,
+			color: '#9d43d9',
+			iconColor: '#9d43d9',
+			background: '#eecbe3'
+		})
 		setItemCount(quantityToAdd);
 		// Global function from cartContext
 		addToCart(item, quantityToAdd);
