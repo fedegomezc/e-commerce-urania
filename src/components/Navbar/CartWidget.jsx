@@ -21,6 +21,8 @@ export default CartWidget;
 
 const CartIcon = styled.div`
     position: relative;
+    right: 10px;
+    top: 8px;
     font-size: 30px;
     padding: 8px;
     border-radius: 4px;
@@ -30,7 +32,7 @@ const CartAmount = styled.div`
     top: -8px;
     right: -2px;
     font-size: 16px;
-    background-color: #ff7300;
+    background-color: #f4368b;
     color: white;
     padding: 3px;
     border-radius: 3px;

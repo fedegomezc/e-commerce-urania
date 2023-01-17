@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { setDoc, collection, doc, serverTimestamp, updateDoc, increment } from "firebase/firestore";
 import { db } from '../../utils/firebaseConfig';
 import Swal from 'sweetalert2';
-
+import {BsCartXFill} from 'react-icons/bs'
 
 const Cart = () => {
   const { cartList, deleteItem, removeList, total} = useContext(CartContext);
@@ -30,7 +30,7 @@ const Cart = () => {
       buyer: {
         name: "Leo Messi",
         email: "traemelacopa@messi.com",
-        phone: "123456789"
+        phone: "197819862022"
       },
       total: {total},
       items: itemsForDB,
@@ -60,13 +60,16 @@ const Cart = () => {
 
   return (
     <>
-      <h1>Carrito</h1>
+      <CartTitle>
+        <h1>Carrito</h1>
+      </CartTitle>
       <ul>
         {
           cartList.length === 0 
-          ? <div>
+          ? <EmptyCart>
+              <BsCartXFill /> <br />
               <p>El carrito está vacío</p>
-            </div>
+            </EmptyCart>
           : <CartContainer>
               <Top>
                 <Link to='/'><TopButton>SEGUIR COMPRANDO</TopButton></Link>
@@ -80,13 +83,13 @@ const Cart = () => {
                         <div>
                         | <img src={item.image} alt={item.description} />
                         </div>
-                        <div>
+                        <ProductInfo>
                           <h3>{item.text}</h3>
                           <p>Cantidad: {item.quantityToAdd}</p>
                           <p>Precio: $ {item.price}</p>
-                          <p>Subtotal: $ {item.quantityToAdd * item.price}</p>
-                          <button onClick={() => deleteItem(item.id)}>Eliminar</button>
-                        </div> 
+                          <h4>Subtotal: $ {item.quantityToAdd * item.price}</h4>
+                        </ProductInfo> 
+                        <button onClick={() => deleteItem(item.id)}>Eliminar</button>
                       </Product>
                     )
                   )
@@ -108,25 +111,74 @@ export default Cart
 
 // Styled components
 
+const EmptyCart = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  font-size: 30px;
+
+  p {
+    font-family: sans-serif;
+    font-size: large;
+  }
+`
+
+const CartTitle = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+
+  h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #9d43d9;
+
+  }
+`
+
 const CartContainer = styled.section`
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   align-items: center;
   `
 
 const Top = styled.div`
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%
+
 `
 const TopButton = styled.button`
-  padding: 10px;
+padding: 15px 25px;
+  text-align: center;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #9d43d9;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #9d43d9;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #9d43d9;
+
+  :hover {
+  color: #eecbe3;
+  box-shadow: inset 0 -100px 0 0 #bc61f9;
+  }
+
+  :active {
+  transform: scale(0.9);
+  }
 
 `
 const Products = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  max-width: 800px;
+  align-items: stretch;
+  width: 80%;
   padding: 20px;
   font-family: 'Roboto', sans-serif;
 `
@@ -137,31 +189,52 @@ const Product = styled.div`
 
   h3 {
     margin: 0 0 10px;
-    font-size: 20px;
+    font-size: 18px;
+    color: #9d43d9;
+  }
+
+  h4 {
+    padding-top: 5px;
+    text-align: center;
   }
 
   img {
     display: flex;
     margin: 0 auto;
-    width: 12rem;
+    width: 8rem;
     height: auto;
+    border-radius: 100px;
   }
 
   p {
     margin: 0;
+    font-size: 15px;
+    padding: 3px;
   }
 
   button {
-    background-color: #f44336;
-    border: 0;
-    color: #fff;
-    cursor: pointer;
-    display: block;
-    font-size: 16px;
-    margin: 20px auto 0;
-    padding: 10px;
-    width: 150px;
+  min-width: 130px;
+  height: 40px;
+  color: #f4368b;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid #f4368b;
+  background: #fff;
+
+  :hover {
+  background: #f4368b;
+  color: #fff
   }
+  }
+`
+const ProductInfo = styled.div`
+  width: 300px;
 `
 const Total = styled.div`
   /* estilos para la sección final */
