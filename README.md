@@ -13,6 +13,7 @@ El proyecto consiste en un e-commerce de piezas hechas en cerámica.
 * Styled-Components
 * SweetAlert2
 * React-Icons
+* Firebase
 
 ## Autor ✒️
 Federico Gómez Conde
