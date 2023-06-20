@@ -2,6 +2,7 @@
 Hola👋 Soy Fede!  
 Este es mi proyecto final para el curso de React de CoderHouse.  
 El proyecto consiste en un e-commerce de piezas hechas en cerámica.
+Se utilizó Firebase de Google como base datos para alojar la colección de productos y también para guardar las órdenes de pedido al finalizar cada compra.
 
 ## Capturas
 ![Urania_1](https://user-images.githubusercontent.com/106751267/213042696-6e6f16ae-9a3c-44ad-924e-f366ec0c2cee.gif)
